@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ASCII Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ASCII Converter</h1>
+
+  <h2>Convert Any Media</h2>
+  <form id="unifiedForm" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*,video/*,.gif" required>
+    <label for="unifiedRamp">Ramp:</label>
+    <select name="ramp" id="unifiedRamp">
+      <option value="SIMPLE">Simple</option>
+      <option value="LIGHT">Light</option>
+      <option value="DENSE" selected>Dense</option>
+    </select>
+    <label for="unifiedWidth">Width: <span id="unifiedWidthValue">120</span></label>
+    <input type="range" id="unifiedWidth" min="50" max="300" value="120">
+    <label><input type="checkbox" name="color" value="true"> Color</label>
+    <label><input type="checkbox" name="dither" value="true"> Dither</label>
+    <button type="submit">Convert</button>
+  </form>
+  <div id="unifiedControls" hidden>
+    <button type="button" id="unifiedPrev" aria-label="Previous frame">Prev</button>
+    <span id="unifiedFrameInfo">Frame 0 / 0</span>
+    <button type="button" id="unifiedNext" aria-label="Next frame">Next</button>
+  </div>
+  <div id="unifiedOutput" style="white-space: pre; font-family: monospace; background-color: black; color: white; padding: 20px; overflow: auto;" hidden></div>
+  <button id="unifiedDownloadFrameBtn" disabled hidden>Download Current Frame / Image</button>
+  <button id="unifiedDownloadFullBtn" disabled hidden>Download Full Media</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
