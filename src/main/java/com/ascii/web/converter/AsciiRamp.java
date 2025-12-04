@@ -18,16 +18,16 @@ public enum AsciiRamp
         return chars;
     }
 
-    public static AsciiRamp fromString(String s) 
+    public static AsciiRamp fromString(String choice) 
     {
-        if (s == null) return DENSE;
+        if (choice == null) return DENSE;
         try
         {
-            return AsciiRamp.valueOf(s.trim().toUpperCase());
+            return AsciiRamp.valueOf(choice.trim().toUpperCase());
         } 
         catch (IllegalArgumentException e) 
         {
-            String normalized = s.trim().toUpperCase();
+            String normalized = choice.trim().toUpperCase();
             switch (normalized) 
             {
                 case "SIMPLE":
