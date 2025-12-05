@@ -1,6 +1,6 @@
 # Media-To-ASCII Web Converter
 
-A webapp that converts your images, videos, and GIFs into ASCII art! Upload any media file and let the program work its magic!
+A webapp that converts your images, videos, and GIFs into ASCII art!
 
 ## Features
 
